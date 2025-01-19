@@ -1,242 +1,301 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional webpage of Sivaprasad. G, Microsoft Certified Trainer specializing in Azure, Python, and Power Apps.">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional webpage of Sivaprasad. G, Microsoft Certified Trainer specializing in Azure, Python, and Power Apps."
+    />
     <title>Sivaprasad. G - Microsoft Certified Trainer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"> <!-- Modern Font Family -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Modern Font Family -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Font Awesome for Email Icon -->
     <style>
-        :root {
-            --primary-color: #0A74DA; /* Soft Teal Color */
-            --secondary-color: #ffffff;
-            --text-color: #333333;
-            --bg-gradient: linear-gradient(135deg, #e9f7fb, #ffffff);
-            --hover-color: #0A5B9C; /* Hover Color */
-            --blink-color: #0A74DA; /* Color for the Blinking Cursor */
-            --shadow-color: rgba(0, 0, 0, 0.1);
-        }
+      :root {
+        --primary-color: #0a74da; /* Soft Teal Color */
+        --secondary-color: #ffffff;
+        --text-color: #333333;
+        --bg-gradient: linear-gradient(135deg, #e9f7fb, #ffffff);
+        --hover-color: #ffa500; /* Hover Color (Orange) */
+        --email-hover-color: #ff4500; /* Red/Orange Hover Color for Email Icon */
+        --blink-color: #0a74da; /* Color for the Blinking Cursor */
+        --shadow-color: rgba(0, 0, 0, 0.1);
+      }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background: var(--bg-gradient);
-            overflow-x: hidden;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        line-height: 1.6;
+        color: var(--text-color);
+        background: var(--bg-gradient);
+        overflow-x: hidden;
+      }
 
-        header {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            text-align: center;
-            background: var(--bg-gradient);
-            padding: 0 20px;
-        }
+      header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        background: var(--bg-gradient);
+        padding: 0 20px;
+      }
 
-        header h1 {
-            font-size: 4rem;
-            font-weight: 600;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            white-space: nowrap;
-            overflow: hidden;
-            border-right: 0.1em solid var(--blink-color);
-            animation: typing 4s steps(13, end), blink 0.75s step-end infinite;
-            letter-spacing: 0.2rem;
-        }
+      header h1 {
+        font-size: 4rem;
+        font-weight: 600;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 0.1em solid var(--blink-color);
+        animation: typing 4s steps(13, end), blink 0.75s step-end infinite;
+        letter-spacing: 0.2rem;
+      }
 
-        header p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
-            color: var(--text-color);
-            font-weight: 300;
-        }
+      header p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+        color: var(--text-color);
+        font-weight: 300;
+        transition: color 0.3s ease-in-out;
+      }
 
-        .cta-button {
-            display: inline-block;
-            padding: 14px 30px;
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 500;
-            border-radius: 5px;
-            transition: all 0.3s ease-in-out;
-            box-shadow: 0 4px 8px var(--shadow-color);
-        }
+      header p:hover {
+        color: var(--hover-color); /* Change color on hover */
+      }
 
-        .cta-button:hover {
-            background-color: var(--hover-color);
-            transform: translateY(-5px);
-            box-shadow: 0 6px 12px var(--shadow-color);
-        }
+      .cta-button {
+        display: inline-block;
+        padding: 14px 30px;
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: 500;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out;
+        box-shadow: 0 4px 8px var(--shadow-color);
+      }
 
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
-        }
+      .cta-button:hover {
+        background-color: var(--hover-color);
+        transform: translateY(-5px);
+        box-shadow: 0 6px 12px var(--shadow-color);
+      }
 
-        @keyframes blink {
-            50% { border-color: transparent; }
+      @keyframes typing {
+        from {
+          width: 0;
         }
-
-        section {
-            padding: 4rem 2rem;
-            text-align: center;
-            transition: transform 0.5s ease;
+        to {
+          width: 12ch; /* This ensures the text stops at 'Sivaprasad. G' */
         }
+      }
 
-        section:hover {
-            transform: translateY(-10px);
+      @keyframes blink {
+        50% {
+          border-color: transparent;
         }
+      }
 
-        section h2 {
-            color: var(--primary-color);
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+      section {
+        padding: 4rem 2rem;
+        text-align: center;
+        transition: transform 0.5s ease;
+      }
 
-        .about, .certifications, .workshops {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 3rem;
-        }
+      section:hover {
+        transform: translateY(-10px);
+      }
 
-        .about p, .certifications ul, .workshops ul {
-            max-width: 800px;
-            text-align: justify;
-            margin: 1rem auto;
-            font-size: 1.1rem;
-        }
+      section h2 {
+        color: var(--primary-color);
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+      .about,
+      .certifications,
+      .workshops {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 3rem;
+      }
 
-        ul li {
-            margin-bottom: 0.5rem;
-        }
+      .about p,
+      .certifications ul,
+      .workshops ul {
+        max-width: 800px;
+        text-align: justify;
+        margin: 1rem auto;
+        font-size: 1.1rem;
+      }
 
-        .certifications ul li:hover {
-            color: var(--primary-color);
-            font-weight: bold;
-            transition: color 0.3s ease;
-        }
+      ul {
+        list-style-type: none;
+        padding: 0;
+      }
 
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+      ul li {
+        margin-bottom: 0.5rem;
+      }
 
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            max-width: 500px;
-            padding: 12px;
-            margin: 12px 0;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            font-size: 1rem;
-            transition: border-color 0.3s ease;
-        }
+      .certifications ul li:hover {
+        color: var(--primary-color);
+        font-weight: bold;
+        transition: color 0.3s ease;
+      }
 
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: var(--primary-color);
-            outline: none;
-        }
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 
-        .contact-form button {
-            background-color: var(--primary-color);
-            color: var(--secondary-color);
-            border: none;
-            padding: 14px 30px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-size: 1.2rem;
-            transition: background-color 0.3s, transform 0.3s;
-        }
+      .contact-form input,
+      .contact-form textarea {
+        width: 100%;
+        max-width: 500px;
+        padding: 12px;
+        margin: 12px 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.3s ease;
+      }
 
-        .contact-form button:hover {
-            background-color: var(--hover-color);
-            transform: translateY(-5px);
-        }
+      .contact-form input:focus,
+      .contact-form textarea:focus {
+        border-color: var(--primary-color);
+        outline: none;
+      }
 
-        footer {
-            text-align: center;
-            padding: 1rem;
-            background-color: #f0f0f0;
-            box-shadow: 0 4px 8px var(--shadow-color);
-        }
+      .contact-form button {
+        background-color: var(--primary-color);
+        color: var(--secondary-color);
+        border: none;
+        padding: 14px 30px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.2rem;
+        transition: background-color 0.3s, transform 0.3s;
+      }
 
+      .contact-form button:hover {
+        background-color: var(--hover-color);
+        transform: translateY(-5px);
+      }
+
+      .email-icon {
+        font-size: 30px;
+        color: var(--primary-color);
+        background-color: var(--secondary-color);
+        border-radius: 50%;
+        padding: 12px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+      }
+
+      .email-icon:hover {
+        background-color: var(
+          --email-hover-color
+        ); /* Hover effect for email icon */
+        color: var(--secondary-color); /* Change icon color on hover */
+      }
+
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #f0f0f0;
+        box-shadow: 0 4px 8px var(--shadow-color);
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
+    <header>
+      <h1>SIVAPRASAD. G</h1>
+      <p>Microsoft Certified Trainer | Azure AI Engineer | Python Specialist</p>
+      <a href="#contact" class="cta-button">Contact Me</a>
+    </header>
 
-<header>
-    <h1>SIVAPRASAD. G</h1>
-    <p>Microsoft Certified Trainer | Azure AI Engineer | Python Specialist</p>
-    <a href="#contact" class="cta-button">Contact Me</a>
-</header>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about">
+        <p>
+          I began my journey as a Microsoft Student Partner, mastering Microsoft
+          technologies and mentoring developers. With experience in app
+          development for Windows and collaborations with the Microsoft App
+          Review Board, I’ve built a career empowering developers, employees,
+          and students through training sessions on Azure, Python, and more. I
+          am constantly updating my certifications to stay current in the field,
+          excited to provide my expertise to the community.
+        </p>
+      </div>
+    </section>
 
-<section id="about">
-    <h2>About Me</h2>
-    <div class="about">
-        <p>I began my journey as a Microsoft Student Partner, mastering Microsoft technologies and mentoring developers. With experience in app development for Windows and collaborations with the Microsoft App Review Board, I’ve built a career empowering developers, employees, and students through training sessions on Azure, Python, and more.</p>
-    </div>
-</section>
-
-<section id="certifications">
-    <h2>Certifications</h2>
-    <div class="certifications">
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="certifications">
         <ul>
-            <li>Microsoft Certified: Azure AI Engineer Associate</li>
-            <li>Microsoft Certified: Azure AI Fundamentals</li>
-            <li>Microsoft Certified: Azure Fundamentals (Dec 8, 2020)</li>
-            <li>MTA: Introduction to Programming Using Python</li>
+          <li>Microsoft Certified: Azure AI Engineer Associate</li>
+          <li>Microsoft Certified: Azure AI Fundamentals</li>
+          <li>Microsoft Certified: Azure Fundamentals (Dec 8, 2020)</li>
+          <li>MTA: Introduction to Programming Using Python</li>
         </ul>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="workshops">
-    <h2>Workshops & Trainings</h2>
-    <div class="workshops">
+    <section id="workshops">
+      <h2>Workshops & Trainings</h2>
+      <div class="workshops">
         <ul>
-            <li>Azure AI & Fundamentals Training for Professionals</li>
-            <li>Python Programming for Developers</li>
-            <li>Power Apps and Office Suite for Businesses</li>
+          <li>Azure AI & Fundamentals Training for Professionals</li>
+          <li>Python Programming for Developers</li>
+          <li>Power Apps and Office Suite for Businesses</li>
         </ul>
-    </div>
-</section>
+      </div>
+    </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-form">
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <div class="contact-form">
         <form>
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-            <button type="submit">Send Message</button>
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit">Send Message</button>
         </form>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer>
-    <p>© 2025 Sivaprasad. G | All Rights Reserved</p>
-</footer>
-
-</body>
+    <footer>
+      <p>© 2025 Sivaprasad. G | All Rights Reserved</p>
+      <a href="mailto:sivaprasad@example.com"
+        ><i class="fas fa-envelope email-icon"></i
+      ></a>
+    </footer>
+  </body>
 </html>
